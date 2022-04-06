@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -14,12 +15,16 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    WebView my_webview;
+
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        my_webview.loadUrl("https://euw.op.gg/summoners/euw/plumperpass");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        my_webview.loadUrl("file//android_assets.index.html");
     }
 
     @Override
@@ -28,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        findViewById(R.id.my_webview);
+
+        my_webview.getSettings().setJavaScriptEnabled(true);
 
         /*
         * Rename your App. Tip: Values->Strings
