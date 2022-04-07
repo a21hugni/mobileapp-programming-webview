@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
-        my_webview.loadUrl("file//android_assets.index.html");
+        my_webview.loadUrl("file///:android_assets.index.html");
     }
 
     @Override
@@ -35,7 +36,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         findViewById(R.id.my_webview);
 
-        my_webview.getSettings().setJavaScriptEnabled(true);
+        WebView my_webview = (WebView) findViewById(R.id.my_webview);
+
+        WebSettings webSettings = my_webview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
 
         /*
         * Rename your App. Tip: Values->Strings
