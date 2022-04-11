@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
-        my_webview.loadUrl("https://euw.op.gg/summoners/euw/plumperpass");
+        my_webview.loadUrl("https://www.his.se/");
     }
 
     public void showInternalWebPage(){
