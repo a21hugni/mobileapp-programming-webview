@@ -1,7 +1,7 @@
 
 # Rapport
 
-Jag gjorde en sträng som är appens namn och lade sedan till den i XML-filen. Jag lade till en webview i Den ena XML-filen och länkade en extern och en inter sida som jag har gjort själv som visas i denna webview. Jag satte även på javascript och internet.
+Jag gjorde en sträng som är appens namn och lade sedan till den i XML-filen som heter activity_main.xml. Jag lade till en webview i samma XML-fil och länkade en extern och en intern sida, som jag har gjort själv. Dessa två sidor visas i webview. Jag satte även på javascript och internet för denna app.
 
 
 
@@ -16,6 +16,8 @@ Jag gjorde en sträng som är appens namn och lade sedan till den i XML-filen. J
         webSettings.setJavaScriptEnabled(true);
 ```
 
+I detta kodexempel så sätter jag på internet och javascript. Jag hittar även efter den webview jag har skapat och lägger till de länkar som ska visas i den.
 
 ![](his.png)
+![](intern.png)
 
